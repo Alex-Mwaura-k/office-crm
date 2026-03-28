@@ -7,3 +7,8 @@ export const MENU_ITEMS = [
   { name: "Projects & Inventory", path: "/office/inventory" },
   { name: "Staff Management", path: "/office/employees" },
 ];
+
+export const TEST_CREDENTIALS = {
+  username: "admin",
+  password: "admin2025"
+};

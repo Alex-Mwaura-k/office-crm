@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Login from "./pages/Login";
 import OfficeLayout from "./office/OfficeLayout";
 import Dashboard from "./pages/Dashboard";
 import Clients from "./pages/Clients";
@@ -12,8 +13,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/office" replace />} />
+        {/* Redirect immediately to the login page */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
 
+        {/* The standalone Login Route (no sidebar/navbar) */}
+        <Route path="/login" element={<Login />} />
+
+        {/* The main dashboard wrapped in the OfficeLayout */}
         <Route path="/office" element={<OfficeLayout />}>
           <Route index element={<Dashboard />} />
 
