@@ -10,5 +10,5 @@ export const MENU_ITEMS = [
 
 export const TEST_CREDENTIALS = {
   username: "admin",
-  password: "admin2025"
+  password: "admin2026"
 };

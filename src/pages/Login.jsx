@@ -26,7 +26,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-brand-gray dark:bg-brand-black p-4 transition-colors duration-300">
+    <div className="h-[100dvh] overflow-hidden flex items-center justify-center bg-brand-gray dark:bg-brand-black p-4 transition-colors duration-300">
       <div className="max-w-md w-full bg-white dark:bg-neutral-900 rounded-2xl shadow-xl border border-gray-100 dark:border-neutral-800 p-8">
         
         {/* Logo Branding */}
