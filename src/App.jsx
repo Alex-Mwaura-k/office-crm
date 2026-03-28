@@ -1,0 +1,42 @@
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import OfficeLayout from "./office/OfficeLayout";
+import Dashboard from "./pages/Dashboard";
+import Clients from "./pages/Clients";
+import ClientProfile from "./pages/ClientProfile";
+import ClientRegister from "./pages/ClientRegister";
+import ProjectsInventory from "./pages/ProjectsInventory";
+import AddProject from "./pages/AddProject";
+import POS from "./pages/POS";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to="/office" replace />} />
+
+        <Route path="/office" element={<OfficeLayout />}>
+          <Route index element={<Dashboard />} />
+
+          <Route path="clients" element={<Clients />} />
+          <Route path="clients/register" element={<ClientRegister />} />
+          <Route path="clients/:id" element={<ClientProfile />} />
+
+          <Route path="inventory" element={<ProjectsInventory />} />
+          <Route path="inventory/add" element={<AddProject />} />
+          <Route path="pos" element={<POS />} />
+
+          <Route
+            path="employees"
+            element={
+              <div className="p-4 dark:text-white">
+                Staff Management Coming Soon
+              </div>
+            }
+          />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
