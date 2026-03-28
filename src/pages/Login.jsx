@@ -26,14 +26,21 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-neutral-950 p-4">
-      <div className="max-w-md w-full bg-white dark:bg-neutral-900 rounded-2xl shadow-lg border border-gray-100 dark:border-neutral-800 p-8">
+    <div className="min-h-screen flex items-center justify-center bg-brand-gray dark:bg-brand-black p-4 transition-colors duration-300">
+      <div className="max-w-md w-full bg-white dark:bg-neutral-900 rounded-2xl shadow-xl border border-gray-100 dark:border-neutral-800 p-8">
         
+        {/* Logo Branding */}
+        <div className="flex justify-center mb-4">
+          <h1 className="font-bold text-3xl tracking-wider text-slate-900 dark:text-white">
+            FEDHA<span>-</span><span className="text-brand-red">Office</span>
+          </h1>
+        </div>
+
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+          <h2 className="text-xl font-bold text-slate-800 dark:text-gray-100 mb-2">
             Welcome Back
-          </h1>
+          </h2>
           <p className="text-gray-500 dark:text-gray-400 text-sm">
             Please sign in to access your dashboard
           </p>
@@ -42,7 +49,7 @@ export default function Login() {
         {/* Login Form */}
         <form onSubmit={handleLogin} className="space-y-5">
           {error && (
-            <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-600 dark:text-red-400 text-sm text-center">
+            <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-600 dark:text-red-400 text-sm text-center animate-in fade-in">
               {error}
             </div>
           )}
@@ -59,8 +66,8 @@ export default function Login() {
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-gray-50 dark:bg-neutral-950 border border-gray-200 dark:border-neutral-800 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:text-white outline-none transition-all"
-                placeholder="Enter admin"
+                className="w-full pl-10 pr-4 py-2.5 bg-gray-50 dark:bg-neutral-950 border border-gray-200 dark:border-neutral-800 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-brand-red dark:text-white outline-none transition-all"
+                placeholder="User"
                 required
               />
             </div>
@@ -78,8 +85,8 @@ export default function Login() {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-gray-50 dark:bg-neutral-950 border border-gray-200 dark:border-neutral-800 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:text-white outline-none transition-all"
-                placeholder="Enter admin2025"
+                className="w-full pl-10 pr-4 py-2.5 bg-gray-50 dark:bg-neutral-950 border border-gray-200 dark:border-neutral-800 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-brand-red dark:text-white outline-none transition-all"
+                placeholder="Password"
                 required
               />
             </div>
@@ -87,9 +94,9 @@ export default function Login() {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-lg transition-colors mt-2"
+            className="w-full bg-brand-red hover:bg-red-700 text-white font-semibold py-2.5 rounded-lg transition-colors mt-2 shadow-md hover:shadow-lg"
           >
-            LogIn
+            Login
           </button>
         </form>
 
