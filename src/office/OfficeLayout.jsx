@@ -132,8 +132,8 @@ export default function OfficeLayout() {
           `}
         >
           {/* Brand Header */}
-          <div className="h-16 flex items-center justify-between px-4 border-b border-neutral-800">
-            <div className="flex items-center justify-center w-full">
+          <div className="h-16 flex items-center justify-between px-6 border-b border-neutral-800">
+            <div className="flex items-center w-full">
               
               {/* Long Logo for Expanded Sidebar */}
               <img 
@@ -144,7 +144,7 @@ export default function OfficeLayout() {
               
               {/* Collapsed Sidebar State */}
               {!isSidebarOpen && (
-                <span className="hidden md:block text-brand-red font-bold text-xl">
+                <span className="hidden md:block text-brand-red font-bold text-xl mx-auto">
                   F
                 </span>
               )}
