@@ -134,16 +134,21 @@ export default function OfficeLayout() {
           {/* Brand Header */}
           <div className="h-16 flex items-center justify-between px-4 border-b border-neutral-800">
             <div className="flex items-center justify-center w-full">
-              <h1
-                className={`font-bold text-xl tracking-wider ${!isSidebarOpen && "md:hidden"}`}
-              >
-                FEDHA<span className="text-brand-red">ADMIN</span>
-              </h1>
+              
+              {/* Long Logo for Expanded Sidebar */}
+              <img 
+                src="/icons/long_logo.png" 
+                alt="FEDHA Admin" 
+                className={`h-8 w-auto object-contain ${!isSidebarOpen && "md:hidden"}`}
+              />
+              
+              {/* Collapsed Sidebar State */}
               {!isSidebarOpen && (
                 <span className="hidden md:block text-brand-red font-bold text-xl">
                   F
                 </span>
               )}
+
             </div>
 
             <button
