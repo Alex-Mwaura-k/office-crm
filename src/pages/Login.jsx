@@ -30,7 +30,12 @@ export default function Login() {
       <div className="max-w-md w-full bg-white dark:bg-neutral-900 rounded-2xl shadow-xl border border-gray-100 dark:border-neutral-800 p-8">
         
         {/* Logo Branding */}
-        <div className="flex justify-center mb-4">
+        <div className="flex flex-col items-center justify-center mb-2">
+          <img 
+  src="/icons/logo.png" 
+  alt="FEDHA Logo" 
+  className="w-20 h-20 rounded-full object-cover mb-4 shadow-sm border-4 border-brand-red"
+/>
           <h1 className="font-bold text-3xl tracking-wider text-slate-900 dark:text-white">
             FEDHA<span>-</span><span className="text-brand-red">Office</span>
           </h1>
