@@ -87,7 +87,7 @@ export default function ProjectsInventory() {
         return "bg-blue-50 border-blue-200 text-blue-700 dark:bg-blue-900/20 dark:border-blue-800 dark:text-blue-400";
       case "Booked": // YELLOW
         return "bg-yellow-50 border-yellow-200 text-yellow-700 dark:bg-yellow-900/20 dark:border-yellow-800 dark:text-yellow-400";
-      case "Sold Out": // RED
+      case "Sold": // RED
         return "bg-red-50 border-red-200 text-red-700 dark:bg-red-900/20 dark:border-red-800 dark:text-red-400";
       default:
         return "bg-gray-50 border-gray-200 text-gray-700";
