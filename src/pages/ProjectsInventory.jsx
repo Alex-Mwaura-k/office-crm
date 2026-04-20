@@ -121,7 +121,7 @@ export default function ProjectsInventory() {
                 {selectedPlot.status === "Available" && (
                   <CheckCircle size={24} />
                 )}
-                {selectedPlot.status === "Sold Out" && (
+                {selectedPlot.status === "Sold" && (
                   <AlertCircle size={24} />
                 )}
                 {(selectedPlot.status === "Reserved" ||
@@ -313,7 +313,7 @@ export default function ProjectsInventory() {
                   <option value="Available">Available</option>
                   <option value="Reserved">Reserved</option>
                   <option value="Booked">Booked</option>
-                  <option value="Sold Out">Sold Out</option>
+                  <option value="Sold Out">Sold</option>
                 </select>
               </div>
             </div>
